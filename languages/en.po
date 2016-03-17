@@ -1,0 +1,528 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Project-Id-Version: Cortex Widgets\n"
+"POT-Creation-Date: 2016-01-12 14:23-0600\n"
+"PO-Revision-Date: 2016-01-12 14:23-0600\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: cortex-widgets.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Last-Translator: \n"
+"Language: en\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: includes/ns_mc_plugin.class.php:52
+msgid ""
+"You'll need to set up the MailChimp signup widget options before using it. "
+msgstr ""
+
+#: includes/ns_mc_plugin.class.php:52
+msgid "You can make your changes"
+msgstr ""
+
+#: includes/ns_mc_plugin.class.php:52
+msgid "here"
+msgstr ""
+
+#: includes/ns_widget_mailchimp.class.php:22
+msgid "There was a problem processing your submission."
+msgstr ""
+
+#: includes/ns_widget_mailchimp.class.php:23
+msgid "Subscribe"
+msgstr ""
+
+#: includes/ns_widget_mailchimp.class.php:24
+msgid ""
+"Thank you for joining our mailing list. Please check your email for a "
+"confirmation link."
+msgstr ""
+
+#: includes/ns_widget_mailchimp.class.php:25
+msgid "Sign up for our mailing list."
+msgstr ""
+
+#: includes/ns_widget_mailchimp.class.php:26
+msgid "Displays a sign-up form for a MailChimp mailing list."
+msgstr ""
+
+#: includes/ns_widget_mailchimp.class.php:27
+msgid "Cortex MailChimp"
+msgstr ""
+
+#: includes/ns_widget_mailchimp.class.php:66
+msgid "General Settings"
+msgstr ""
+
+#: includes/ns_widget_mailchimp.class.php:68 widgets/widget-about.php:84
+#: widgets/widget-contact.php:78 widgets/widget-latest-category.php:122
+#: widgets/widget-subscribe.php:96 widgets/widget-upcoming-events.php:130
+msgid "Title:"
+msgstr ""
+
+#: includes/ns_widget_mailchimp.class.php:72
+msgid "Select a Mailing List:"
+msgstr ""
+
+#: includes/ns_widget_mailchimp.class.php:84
+msgid "This is the list your users will be signing up for in your sidebar."
+msgstr ""
+
+#: includes/ns_widget_mailchimp.class.php:86
+msgid "Sign Up Button Text:"
+msgstr ""
+
+#: includes/ns_widget_mailchimp.class.php:89
+msgid "Personal Information"
+msgstr ""
+
+#: includes/ns_widget_mailchimp.class.php:90
+msgid ""
+"These fields won't (and shouldn't) be required. Should the widget form "
+"collect users' first and last names?"
+msgstr ""
+
+#: includes/ns_widget_mailchimp.class.php:93
+msgid "Collect first name."
+msgstr ""
+
+#: includes/ns_widget_mailchimp.class.php:96
+msgid "Collect last name."
+msgstr ""
+
+#: includes/ns_widget_mailchimp.class.php:98
+msgid "Notifications"
+msgstr ""
+
+#: includes/ns_widget_mailchimp.class.php:99
+msgid ""
+"Use these fields to customize what your visitors see after they submit the "
+"form"
+msgstr ""
+
+#: includes/ns_widget_mailchimp.class.php:101
+msgid "Success :"
+msgstr ""
+
+#: includes/ns_widget_mailchimp.class.php:105
+msgid "Failure :"
+msgstr ""
+
+#: widget-templates/widget-mailchimp-template.php:6
+msgid "Enter first name"
+msgstr ""
+
+#: widget-templates/widget-mailchimp-template.php:11
+msgid "Enter last name"
+msgstr ""
+
+#: widget-templates/widget-mailchimp-template.php:17
+msgid "Enter email"
+msgstr ""
+
+#: widget-templates/widget-twitter-basic-template.php:51
+#: widget-templates/widget-twitter-dark-template.php:42
+#: widget-templates/widget-twitter-light-template.php:42
+msgid "Follow on Twitter"
+msgstr ""
+
+#: widget-templates/widget-twitter-dark-template.php:36
+#: widget-templates/widget-twitter-light-template.php:36
+msgid "ago"
+msgstr ""
+
+#: widget-templates/widget-upcoming-events-template.php:64
+msgid "Tickets"
+msgstr ""
+
+#: widget-templates/widget-upcoming-events-template.php:65
+msgid "Details"
+msgstr ""
+
+#: widgets/widget-about.php:23
+msgid "Cortex About"
+msgstr ""
+
+#: widgets/widget-about.php:24
+msgid "Creates a simple about widget with an image."
+msgstr ""
+
+#: widgets/widget-about.php:81
+msgid "About"
+msgstr ""
+
+#: widgets/widget-about.php:88
+msgid "Image:"
+msgstr ""
+
+#: widgets/widget-about.php:89
+msgid "Select Image"
+msgstr ""
+
+#: widgets/widget-about.php:97
+msgid "About Description:"
+msgstr ""
+
+#: widgets/widget-contact.php:23
+msgid "Cortex Get In Touch"
+msgstr ""
+
+#: widgets/widget-contact.php:24
+msgid "Creates a simple widget with contact information."
+msgstr ""
+
+#: widgets/widget-contact.php:75
+msgid "Cortex Contact Widget"
+msgstr ""
+
+#: widgets/widget-contact.php:84
+msgid "Street:"
+msgstr ""
+
+#: widgets/widget-contact.php:88
+msgid "City:"
+msgstr ""
+
+#: widgets/widget-contact.php:94
+msgid "State:"
+msgstr ""
+
+#: widgets/widget-contact.php:100
+msgid "Postal Code:"
+msgstr ""
+
+#: widgets/widget-contact.php:106
+msgid "Country:"
+msgstr ""
+
+#: widgets/widget-contact.php:112
+msgid "Phone Number: "
+msgstr ""
+
+#: widgets/widget-contact.php:118
+msgid "Contact Email:"
+msgstr ""
+
+#: widgets/widget-instagram.php:15
+msgid "Displays your latest Instagram photos"
+msgstr ""
+
+#: widgets/widget-instagram.php:16
+msgid "Cortex Instagram"
+msgstr ""
+
+#: widgets/widget-instagram.php:66
+msgid "Instagram"
+msgstr ""
+
+#: widgets/widget-instagram.php:66
+msgid "Follow Us"
+msgstr ""
+
+#: widgets/widget-instagram.php:74
+msgid "Title"
+msgstr ""
+
+#: widgets/widget-instagram.php:75
+msgid "Username"
+msgstr ""
+
+#: widgets/widget-instagram.php:76
+msgid "Number of photos"
+msgstr ""
+
+#: widgets/widget-instagram.php:77
+msgid "Photo size"
+msgstr ""
+
+#: widgets/widget-instagram.php:79
+msgid "Thumbnail"
+msgstr ""
+
+#: widgets/widget-instagram.php:80
+msgid "Large"
+msgstr ""
+
+#: widgets/widget-instagram.php:83
+msgid "Open links in"
+msgstr ""
+
+#: widgets/widget-instagram.php:85
+msgid "Current window (_self)"
+msgstr ""
+
+#: widgets/widget-instagram.php:86
+msgid "New window (_blank)"
+msgstr ""
+
+#: widgets/widget-instagram.php:89
+msgid "Link text"
+msgstr ""
+
+#: widgets/widget-instagram.php:111
+msgid "Unable to communicate with Instagram."
+msgstr ""
+
+#: widgets/widget-instagram.php:113
+msgid "Instagram did not return a 200."
+msgstr ""
+
+#: widgets/widget-instagram.php:118 widgets/widget-instagram.php:122
+#: widgets/widget-instagram.php:125
+msgid "Instagram has returned invalid data."
+msgstr ""
+
+#: widgets/widget-instagram.php:138
+msgid "Instagram Image"
+msgstr ""
+
+#: widgets/widget-instagram.php:165
+msgid "Instagram did not return any images."
+msgstr ""
+
+#: widgets/widget-latest-category.php:15
+msgid "Show latest posts from a category"
+msgstr ""
+
+#: widgets/widget-latest-category.php:16
+msgid "Cortex Latest Posts"
+msgstr ""
+
+#: widgets/widget-latest-category.php:113
+msgid "Category Name"
+msgstr ""
+
+#: widgets/widget-latest-category.php:120
+msgid "Latest Post Settings"
+msgstr ""
+
+#: widgets/widget-latest-category.php:126
+msgid "Maximum number of posts to show:"
+msgstr ""
+
+#: widgets/widget-latest-category.php:130
+msgid "Select Category:"
+msgstr ""
+
+#: widgets/widget-latest-category.php:132
+#: widgets/widget-upcoming-events.php:140
+msgid "All Categories"
+msgstr ""
+
+#: widgets/widget-subscribe.php:24
+msgid "Cortex Subscribe"
+msgstr ""
+
+#: widgets/widget-subscribe.php:25
+msgid "Creates a simple widget with social subscribe/follow buttons."
+msgstr ""
+
+#: widgets/widget-subscribe.php:93
+msgid "Subscribe &amp; Follow"
+msgstr ""
+
+#: widgets/widget-subscribe.php:100
+msgid "Button Type:"
+msgstr ""
+
+#: widgets/widget-subscribe.php:102
+msgid "SELECT"
+msgstr ""
+
+#: widgets/widget-subscribe.php:103
+msgid "Square"
+msgstr ""
+
+#: widgets/widget-subscribe.php:104
+msgid "Normal"
+msgstr ""
+
+#: widgets/widget-subscribe.php:110
+msgid "Facebook Link:"
+msgstr ""
+
+#: widgets/widget-subscribe.php:114
+msgid "Twitter Link:"
+msgstr ""
+
+#: widgets/widget-subscribe.php:118
+msgid "Instagram Link:"
+msgstr ""
+
+#: widgets/widget-subscribe.php:122
+msgid "Google Plus Link:"
+msgstr ""
+
+#: widgets/widget-subscribe.php:126
+msgid "Flickr Link:"
+msgstr ""
+
+#: widgets/widget-subscribe.php:130
+msgid "MailChimp Subscribe Link:"
+msgstr ""
+
+#: widgets/widget-subscribe.php:134
+msgid "YouTube Link:"
+msgstr ""
+
+#: widgets/widget-subscribe.php:138
+msgid "Tumblr Link:"
+msgstr ""
+
+#: widgets/widget-subscribe.php:142
+msgid "Yelp Link:"
+msgstr ""
+
+#: widgets/widget-subscribe.php:146
+msgid "Last.fm Link:"
+msgstr ""
+
+#: widgets/widget-subscribe.php:150
+msgid "Pinterest Link:"
+msgstr ""
+
+#: widgets/widget-subscribe.php:154
+msgid "Reddit Link:"
+msgstr ""
+
+#: widgets/widget-subscribe.php:158
+msgid "LinkedIn Link:"
+msgstr ""
+
+#: widgets/widget-subscribe.php:162
+msgid "Google Maps Link:"
+msgstr ""
+
+#: widgets/widget-subscribe.php:166
+msgid "GitHub Link:"
+msgstr ""
+
+#: widgets/widget-subscribe.php:170
+msgid "SoundCloud Link:"
+msgstr ""
+
+#: widgets/widget-subscribe.php:174
+msgid "DeviantArt Link:"
+msgstr ""
+
+#: widgets/widget-twitter.php:37
+msgid "Cortex Twitter Widget"
+msgstr ""
+
+#: widgets/widget-twitter.php:38
+msgid "Displays a list of tweets or a single tweet from a specified user name"
+msgstr ""
+
+#: widgets/widget-twitter.php:58
+msgid "Cortex Theme Options"
+msgstr ""
+
+#: widgets/widget-twitter.php:59
+#, php-format
+msgid ""
+"<small>In order to display tweets, be sure to enter your API credentials on "
+"the %s page.</small>\t"
+msgstr ""
+
+#: widgets/widget-twitter.php:63
+msgid "Style:"
+msgstr ""
+
+#: widgets/widget-twitter.php:65
+msgid "Basic List"
+msgstr ""
+
+#: widgets/widget-twitter.php:66
+msgid "Dark Medium"
+msgstr ""
+
+#: widgets/widget-twitter.php:67
+msgid "Dark Large"
+msgstr ""
+
+#: widgets/widget-twitter.php:68
+msgid "Light Medium"
+msgstr ""
+
+#: widgets/widget-twitter.php:69
+msgid "Light Large"
+msgstr ""
+
+#: widgets/widget-twitter.php:75
+msgid "Twitter handle:"
+msgstr ""
+
+#: widgets/widget-twitter.php:81
+msgid "Show follow link?"
+msgstr ""
+
+#: widgets/widget-twitter.php:85
+msgid "Title: <small>(Only displays with \"Basic List\" option.)</small>"
+msgstr ""
+
+#: widgets/widget-twitter.php:91
+msgid "Tweets to show:"
+msgstr ""
+
+#: widgets/widget-twitter.php:97
+msgid ""
+"Display avatar and bio? <br /><small>(Only applies to \"Basic List\" "
+"option.)</small>"
+msgstr ""
+
+#: widgets/widget-upcoming-events.php:16
+msgid "Show upcoming events"
+msgstr ""
+
+#: widgets/widget-upcoming-events.php:17
+msgid "Cortex Upcoming Events"
+msgstr ""
+
+#: widgets/widget-upcoming-events.php:88
+msgid "There are no upcoming events at this time"
+msgstr ""
+
+#: widgets/widget-upcoming-events.php:121
+msgid "Events Heading"
+msgstr ""
+
+#: widgets/widget-upcoming-events.php:128
+msgid "Upcoming Events Settings"
+msgstr ""
+
+#: widgets/widget-upcoming-events.php:134
+msgid "Maximum number of events to show:"
+msgstr ""
+
+#: widgets/widget-upcoming-events.php:138
+msgid "Select Event Category:"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Cortex Widgets"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://cortex.covertnine.com"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "For creating the widgets used in the Cortex Wordpress Theme."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "COVERT NINE"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://www.covertnine.com"
+msgstr ""
