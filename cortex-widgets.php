@@ -7,6 +7,8 @@ Version:     1.0
 Author:      COVERT NINE
 Author URI:  http://www.covertnine.com
 Text Domain: cortex-widgets
+GitHub Plugin URI: https://github.com/covertnine/cortex-widgets
+GitHub Branch: master
 */
 
 defined( 'ABSPATH' ) or die( 'Restricted' );
@@ -26,7 +28,7 @@ class CortexWidgets{
 	public function __construct() {
 		add_action( 'init', array( &$this, 'load_plugin_textdomain' ) );
 	}
-	
+
 	public function load_plugin_textdomain() {
 		$domain = CORTEX_TEXTDOMAIN;
 		load_plugin_textdomain( $domain, FALSE, dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages' );

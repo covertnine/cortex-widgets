@@ -128,8 +128,8 @@ class Cortex_Instagram_Widget extends WP_Widget {
 				$image['thumbnail_src'] = preg_replace( "/^https:/i", "", $image['thumbnail_src'] );
 				$image['thumbnail'] = str_replace( 's640x640', 's160x160', $image['thumbnail_src'] );
 				$image['small'] = str_replace( 's640x640', 's320x320', $image['thumbnail_src'] );
-				$image['large'] = $image['thumbnail_src'];
 				$image['display_src'] = preg_replace( "/^https:/i", "", $image['display_src'] );
+				$image['large'] = $image['display_src'];
 				if ( $image['is_video'] == true ) {
 					$type = 'video';
 				} else {
