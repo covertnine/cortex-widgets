@@ -21,7 +21,7 @@ class NS_MC_Plugin {
 		$mailchimp_api_key = get_field('mailchimp_api_key', 'option');
 
 		global $current_user;
-		get_currentuserinfo();
+		wp_get_current_user();
 
 		//after getting current user info, check to see if they have entered in a mailchimp key, if they haven't show notice
 		if ( $mailchimp_api_key == '' ) {
