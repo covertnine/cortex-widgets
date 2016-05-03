@@ -20,12 +20,12 @@ class NS_MC_Plugin {
 		//set the mailchimp api key to the current options
 		$mailchimp_api_key = get_field('mailchimp_api_key', 'option');
 
-		global $current_user;
-		wp_get_current_user();
+		$current_user = wp_get_current_user();
 
 		//after getting current user info, check to see if they have entered in a mailchimp key, if they haven't show notice
-		if ( $mailchimp_api_key == '' ) {
-			if ( empty(get_user_meta($current_user->ID, 'cortex_mailchimp_ignore_notice')) ) {
+		if ( empty($mailchimp_api_key) ) {
+			$c9_notice_set = get_user_meta($current_user->ID, 'cortex_mailchimp_ignore_notice');
+			if ( empty($c9_notice_set) ) {
 				add_action('admin_notices', array(&$this, 'admin_notices'));
 			}
 		}
