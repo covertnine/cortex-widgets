@@ -3,8 +3,8 @@ Contributors: COVERTNINE
 Donate link: http://www.covertnine.com/
 Tags: widgets
 Requires at least: 4.0
-Tested up to: 4.4.1
-Stable tag: 4.3
+Tested up to: 4.6
+Stable tag: 4.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -38,6 +38,11 @@ At this time the Cortex Widgets plugin only works with the Cortex Theme
 
 == Changelog ==
 
+= 1.0.6 =
+* Stable
+* updated date fields to match up with new ACF fields and fixed up some formatting
+
 = 1.0 =
 * Stable
 * API entry moved to Cortex Theme Options page away from Customizer
+
