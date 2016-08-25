@@ -3,7 +3,7 @@
 	        <?php while ( $cortex_upcoming_events->have_posts() ) : $cortex_upcoming_events->the_post();
 		    //custom field renaming for use
 		    $u_start				 = get_field('date_and_time');
-			$u_date					 = date_i18n('F j, Y', $u_start);
+			$u_date					 = date('F j, Y', strtotime($u_start));
 			$event_headline			 = get_field('event_headline');
 			$location_name			 = get_field('location_name');
 			$location_city_country	 = get_field('location_city_country');

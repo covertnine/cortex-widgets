@@ -45,9 +45,9 @@ class Cortex_Upcoming_Events extends WP_Widget {
 					'meta_value'             => $time, // Use the current time from above
 					'meta_compare'           => '>=', // Compare today's datetime with our event datetime
 					'order'                  => 'ASC', // Show earlier events first
-					'posts_per_page' => $items_num,
-					'post__not_in' => array( $post->ID ),
-					'ignore_sticky_posts' => 1
+					'posts_per_page' 		 => $items_num,
+					'post__not_in' 			 => array( $post->ID ),
+					'ignore_sticky_posts' 	 => 1
 				)
 			);
 
