@@ -55,7 +55,7 @@ class Cortex_Twitter_Widget extends WP_Widget {
 	?>
 	<p>
 		<?php
-			$customizer_link = '<a href="' . get_admin_url() . 'admin.php?page=cortex-theme-settings">' . __('Cortex Theme Options', 'cortex-widgets') . '</a>';
+			$customizer_link = '<a href="' . get_admin_url() . 'admin.php?page=cortex-options">' . __('Cortex Theme Options', 'cortex-widgets') . '</a>';
 			echo sprintf( __( '<small>In order to display tweets, be sure to enter your API credentials on the %s page.</small>	', 'cortex-widgets' ), $customizer_link );
 		?>
 	<p>
