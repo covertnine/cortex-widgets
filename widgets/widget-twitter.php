@@ -14,13 +14,14 @@ function cortex_twitter_api() {
 	global $cb;
 
 	//include custom fields for grabbing theme options
-	require( get_template_directory() . '/admin/acf/acf.php' );
+	global $cortex_options;
 
 	//set keys for access to twitter API
-	$consumer_key		 = get_field('consumer_key', 'option');
-	$consumer_secret	 = get_field('consumer_secret', 'option');
-	$access_token		 = get_field('access_token', 'option');
-	$access_secret		 = get_field('access_token_secret', 'option');
+	$consumer_key		 = $cortex_options['c9-consumer-key'];
+	$consumer_secret	 = $cortex_options['c9-consumer-secret'];
+	$access_token		 = $cortex_options['c9-access-token'];
+	$access_secret		 = $cortex_options['c9-access-token-secret'];
+	$c9_twitter_keys	 = array($consumer_key, $consumer_secret, $access_token, $access_secret);
 
 	include( CORTEX_WIDGETS_INCLUDES_PATH . '/codebird.php');
 
@@ -34,7 +35,7 @@ class Cortex_Twitter_Widget extends WP_Widget {
 	/** Widget setup **/
 	function __construct() {
 		parent::__construct(
-		  false, __( 'Cortex Twitter Widget', 'cortex-widgets' ),
+		  false, __( 'Cortex Twitter', 'cortex-widgets' ),
 		  array('description' => __( 'Displays a list of tweets or a single tweet from a specified user name', 'cortex-widgets' ))
 		);
 	}
@@ -42,24 +43,31 @@ class Cortex_Twitter_Widget extends WP_Widget {
 	/** The back-end form **/
 	function form( $instance ) {
 
-		$defaults = array(
-			'title'    => '',
-			'limit'    => 1,
-			'username' => 'covertnine',
-			'avatar_icon' => true,
-			'show_link' => true,
-			'style' => 'basic'
-		);
-		$values = wp_parse_args( $instance, $defaults );
+		global $cortex_options;
+
+		//set keys for access to twitter API
+		$consumer_key		 = $cortex_options['c9-consumer-key'];
+		$consumer_secret	 = $cortex_options['c9-consumer-secret'];
+		$access_token		 = $cortex_options['c9-access-token'];
+		$access_secret		 = $cortex_options['c9-access-token-secret'];
+		$c9_twitter_keys	 = array($consumer_key, $consumer_secret, $access_token, $access_secret);
+
+		// see if keys have been entered, if not send them to the options page
+		if ( !in_array("", $c9_twitter_keys) ) {
+
+			$defaults = array(
+				'title'    => '',
+				'limit'    => 1,
+				'username' => 'covertnine',
+				'avatar_icon' => true,
+				'show_link' => true,
+				'style' => 'basic'
+			);
+			$values = wp_parse_args( $instance, $defaults );
 
 	?>
 	<p>
-		<?php
-			$customizer_link = '<a href="' . get_admin_url() . 'admin.php?page=cortex-options">' . __('Cortex Theme Options', 'cortex-widgets') . '</a>';
-			echo sprintf( __( '<small>In order to display tweets, be sure to enter your API credentials on the %s page.</small>	', 'cortex-widgets' ), $customizer_link );
-		?>
-	<p>
-		<div class="widet_input">
+			<div class="widet_input">
 			<label for="<?php echo $this->get_field_id( 'style' ); ?>"><?php _e( 'Style:', 'cortex-widgets' ); ?></label>
 			<select class="widefat" id="<?php echo $this->get_field_id( 'style' ); ?>" name="<?php echo $this->get_field_name( 'style' ); ?>">
 				<option value="basic"<?php if (($values['style'] == 'basic') || ($values['style'] == '')) { echo " selected"; } ?>><?php _e('Basic List', 'cortex-widgets'); ?></option>
@@ -97,6 +105,16 @@ class Cortex_Twitter_Widget extends WP_Widget {
 	    <label for='<?php echo $this->get_field_id( 'avatar_icon' ); ?>'><?php _e( 'Display avatar and bio? <br /><small>(Only applies to "Basic List" option.)</small>', 'cortex-widgets' ); ?></label>
 	</p>
 	<?php
+		} else { //keys are empty
+	?>
+	<p>
+		<?php
+			$customizer_link = '<a href="' . get_admin_url() . 'admin.php?page=cortex-options">' . __('Cortex Theme Options', 'cortex-widgets') . '</a>';
+			echo sprintf( __( '<small>In order to display tweets, be sure to enter your API credentials on the %s page.</small>	', 'cortex-widgets' ), $customizer_link );
+		?>
+	<p>
+	<?php
+		} //end checking for api keys
 	}
 
 	/** Saving form data **/

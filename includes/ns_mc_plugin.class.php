@@ -14,11 +14,11 @@ class NS_MC_Plugin {
 		//requires pluggable to check if this is a logged in user
 		require( ABSPATH . WPINC . '/pluggable.php' );
 
-		//pulls in ACF functions for getting theme options
-		require( get_template_directory() . '/admin/acf/acf.php' );
+		//grabs global options
+		global $cortex_options;
 
 		//set the mailchimp api key to the current options
-		$mailchimp_api_key = get_field('mailchimp_api_key', 'option');
+		$mailchimp_api_key = $cortex_options['c9-mailchimp-api-key'];
 
 		$current_user = wp_get_current_user();
 
@@ -68,7 +68,10 @@ class NS_MC_Plugin {
 
 	private function get_api_key () {
 
-		$mailchimp_api_key = get_field('mailchimp_api_key', 'option');
+		global $cortex_options;
+
+		//set the mailchimp api key to the current options
+		$mailchimp_api_key = $cortex_options['c9-mailchimp-api-key'];
 
 		if ( !empty($mailchimp_api_key) ) {
 			return $mailchimp_api_key;

@@ -37,6 +37,9 @@ At this time the Cortex Widgets plugin only works with the Cortex Theme
 
 
 == Changelog ==
+= 1.0.7 =
+* Stable
+* Added checks to look for blank API keys for Twitter so users have to enter them before the widget options will show up.
 
 = 1.0.6 =
 * Stable
