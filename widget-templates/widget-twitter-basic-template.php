@@ -27,8 +27,8 @@ if( !empty( $tweets['tweets'] ) and empty( $tweets['tweets']->errors ) ) {
 		<div class="twitter-profile">
 		<img src="' . $user->profile_image_url . '" alt="' . $user->screen_name . ' Twitter Avatar" class="twitter-avatar">
 		<div class="twitter-heading">
-			<h3><a class="heading-text-color" href="http://twitter.com/' . $user->screen_name . '">' . $user->screen_name . '</a></h3>
-			<div class="description content">' . $user->description . '</div>
+			<span class="h5 text-left"><a class="heading-text-color" href="http://twitter.com/' . $user->screen_name . '">' . $user->screen_name . '</a></span>
+			<div class="description content text-left">' . $user->description . '</div>
 		</div>
 		</div>	';
 	}
