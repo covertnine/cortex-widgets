@@ -40,7 +40,7 @@ At this time the Cortex Widgets plugin only works with the Cortex Theme
 
 = 1.0.6 =
 * Stable
-* updated date fields to match up with new ACF fields and fixed up some formatting
+* updated date fields to match up with new ACF fields and fixed up some formatting. Also changed link if you haven't filled in Mail Chimp API keys.
 
 = 1.0 =
 * Stable

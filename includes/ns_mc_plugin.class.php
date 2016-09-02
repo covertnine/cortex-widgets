@@ -49,7 +49,7 @@ class NS_MC_Plugin {
 	public function get_admin_notices () {
 		global $blog_id;
 		$notice = '<p>';
-		$notice .= __('You\'ll need to set up the MailChimp signup widget options before using it. ', 'cortex-widgets') . __('You can make your changes', 'cortex-widgets') . ' <a href="' . get_admin_url($blog_id) . 'admin.php?page=cortex-theme-settings">' . __('here', 'cortex-widgets') . '.</a>';
+		$notice .= __('You\'ll need to set up the MailChimp signup widget options before using it. ', 'cortex-widgets') . __('You can make your changes', 'cortex-widgets') . ' <a href="' . get_admin_url($blog_id) . 'admin.php?page=cortex-options">' . __('here', 'cortex-widgets') . '.</a>';
 		$notice .= '</p>';
 		return $notice;
 	}
