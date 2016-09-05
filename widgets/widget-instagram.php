@@ -73,7 +73,7 @@ class Cortex_Instagram_Widget extends WP_Widget {
 		?>
 		<p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title', 'cortex-widgets'); ?>: <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" /></label></p>
 		<p><label for="<?php echo $this->get_field_id('username'); ?>"><?php _e('Username', 'cortex-widgets'); ?>: <input class="widefat" id="<?php echo $this->get_field_id('username'); ?>" name="<?php echo $this->get_field_name('username'); ?>" type="text" value="<?php echo $username; ?>" /></label></p>
-		<p><label for="<?php echo $this->get_field_id('number'); ?>"><?php _e('Number of photos', 'cortex-widgets'); ?>: <input class="widefat" id="<?php echo $this->get_field_id('number'); ?>" name="<?php echo $this->get_field_name('number'); ?>" type="text" value="<?php echo $number; ?>" /></label></p>
+		<p><label for="<?php echo $this->get_field_id('number'); ?>"><?php _e('Number of photos: <small>(Max 12)</small>', 'cortex-widgets'); ?> <input class="widefat" id="<?php echo $this->get_field_id('number'); ?>" name="<?php echo $this->get_field_name('number'); ?>" type="text" value="<?php echo $number; ?>" /></label></p>
 		<p><label for="<?php echo $this->get_field_id('size'); ?>"><?php _e('Photo size', 'cortex-widgets'); ?>:</label>
 			<select id="<?php echo $this->get_field_id('size'); ?>" name="<?php echo $this->get_field_name('size'); ?>" class="widefat">
 				<option value="thumbnail" <?php selected('thumbnail', $size) ?>><?php _e('Thumbnail', 'cortex-widgets'); ?></option>
