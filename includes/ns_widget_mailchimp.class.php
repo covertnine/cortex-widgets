@@ -6,7 +6,6 @@
 
 class NS_Widget_MailChimp extends WP_Widget {
 	private $default_failure_message;
-	private $default_loader_graphic = CORTEX_WIDGETS_IMAGES_URL . '/ajax-loader.gif';
 	private $default_signup_text;
 	private $default_success_message;
 	private $default_title;
