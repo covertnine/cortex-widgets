@@ -19,13 +19,15 @@ if( !empty( $tweets['tweets'] ) and empty( $tweets['tweets']->errors ) ) {
 
 	$user = current( $tweets['tweets'] );
 	$user = $user->user;
+	$profile_image_url = preg_replace("/^http:/i", "https:", $user->profile_image_url);
+
 ?>
 	<div class="basic">
 <?php
 	if (!empty($instance['avatar_icon'])) { //check to see if avatar should be displayed
 		echo '
 		<div class="twitter-profile">
-		<img src="' . $user->profile_image_url . '" alt="' . $user->screen_name . ' Twitter Avatar" class="twitter-avatar">
+		<img src="' . $profile_image_url . '" alt="' . $user->screen_name . ' Twitter Avatar" class="twitter-avatar">
 		<div class="twitter-heading">
 			<span class="h5 text-left"><a class="heading-text-color" href="http://twitter.com/' . $user->screen_name . '">' . $user->screen_name . '</a></span>
 			<div class="description content text-left">' . $user->description . '</div>

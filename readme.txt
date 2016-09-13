@@ -37,9 +37,12 @@ At this time the Cortex Widgets plugin only works with the Cortex Theme
 
 
 == Changelog ==
+ 1.0.10 =
+ * Added HTTPS for twitter image
+
  1.0.9 =
  * Added messaging for scrape limit for Instagram to 12
- 
+
 = 1.0.8 =
 * Stable
 * Added checks to look for blank API keys for Twitter so users have to enter them before the widget options will show up. Template fixes
