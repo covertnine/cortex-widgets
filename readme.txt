@@ -37,7 +37,10 @@ At this time the Cortex Widgets plugin only works with the Cortex Theme
 
 
 == Changelog ==
- 1.0.10 =
+ 1.0.11 =
+ * Removed first_post_image function, which was broken
+
+  1.0.10 =
  * Added HTTPS for twitter image
 
  1.0.9 =

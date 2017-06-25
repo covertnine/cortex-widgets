@@ -33,21 +33,15 @@
 				</header>
 				<div class="clearfix"></div>
 				<div class="row">
-					<div class="col-xs-6 col-sm-12 col-md-5">
 		            <?php if ( has_post_thumbnail() ) { ?>
+					<div class="col-xs-6 col-sm-12 col-md-5">
 		            	<figure class="single-article-image entry-image alignleft">
 		            		<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 		                    	<?php the_post_thumbnail('large', array('class' => 'img-responsive')); ?>
 		                    </a>
 		    			</figure>
-		            <?php } elseif( first_post_image() ) { // Set the first image from the editor ?>
-						<figure class="single-article-image entry-image alignleft">
-		            		<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-		            			<img src="<?php echo first_post_image(); ?>" alt="<?php the_title(); ?>" />
-		            		</a>
-		        		</figure>
-					<?php } ?>
 					</div><!--end of col-->
+		            <?php } ?>
 					<div class="col-xs-6 col-sm-12 col-md-7">
 						<div class="event-act">
 						<?php if ( !empty($event_headline) ) { ?><span class="h6 opener headline-font mar0B mar0T"><?php echo $event_headline; ?></span><?php } ?>
