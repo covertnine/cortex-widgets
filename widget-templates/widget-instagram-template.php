@@ -8,6 +8,7 @@
 	images array
 */
 ?>
+<div class="instagram-pics-container">
 <ul class="instagram-pics <?php if ($size == 'large') { echo 'large'; } else { echo 'thumbs';} ?>">
 <?php
 foreach ($media_array as $item) {
@@ -30,3 +31,4 @@ foreach ($media_array as $item) {
 			?><p class="clear"><a href="//instagram.com/<?php echo trim($username); ?>" rel="me" target="<?php echo esc_attr( $target ); ?>" class="action-link headline-color-text"><?php echo $link; ?></a></p><?php
 		}
 ?>
+</div>
