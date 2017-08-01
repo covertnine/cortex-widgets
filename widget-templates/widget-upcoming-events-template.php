@@ -18,11 +18,11 @@
 			 $opener_4				 = get_field('opener_4');
 			 $opener_5				 = get_field('opener_5');
 	        ?>
-			<article class="single-article mar20B clearfix">
+			<article class="single-article mar40B clearfix">
 
 				<header class="single-article-title">
-					<h5 class="entry-title mar0B"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><span class="mar0T"><?php the_title();?></span></a></h5>
 					<div class="magazine-article-date"><span class="h6 alternate"><?php echo $u_date; ?></span></div>
+					<h5 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><span class="mar0T"><?php the_title();?></span></a></h5>
 					<div class="venue">
 						<?php if ( !empty($location_map_link) ) { ?>
 						<a href="<?php echo $location_map_link; ?>" target="_blank">
