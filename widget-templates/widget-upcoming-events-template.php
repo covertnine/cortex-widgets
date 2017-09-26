@@ -12,11 +12,6 @@
 			$event_ticket_link		 = get_field('event_ticket_link');
 			$rsvp_link				 = get_field('rsvp_link');
 			$share_buttons			 = get_field('share_buttons');
-			 $opener_1				 = get_field('opener_1');
-			 $opener_2				 = get_field('opener_2');
-			 $opener_3				 = get_field('opener_3');
-			 $opener_4				 = get_field('opener_4');
-			 $opener_5				 = get_field('opener_5');
 	        ?>
 			<article class="single-article mar40B clearfix">
 
@@ -45,11 +40,17 @@
 					<div class="col-xs-6 col-sm-12 col-md-7">
 						<div class="event-act">
 						<?php if ( !empty($event_headline) ) { ?><span class="h6 opener headline-font mar0B mar0T"><?php echo $event_headline; ?></span><?php } ?>
-						<?php if ( !empty($opener_1) ) { ?><span class="h6 opener headline-font mar0B"><?php echo $opener_1; ?></span><?php } ?>
-						<?php if ( !empty($opener_2) ) { ?><span class="h6 opener headline-font mar0B"><?php echo $opener_2; ?></span><?php } ?>
-						<?php if ( !empty($opener_3) ) { ?><span class="h6 opener headline-font mar0B"><?php echo $opener_3; ?></span><?php } ?>
-						<?php if ( !empty($opener_4) ) { ?><span class="h6 opener headline-font mar0B"><?php echo $opener_4; ?></span><?php } ?>
-						<?php if ( !empty($opener_5) ) { ?><span class="h6 opener headline-font mar0B"><?php echo $opener_5; ?></span><?php } ?>
+						<?php // check if the repeater field has rows of data
+						if( have_rows('additional_headliners') ):
+
+						 	// loop through the rows of data
+						    while ( have_rows('additional_headliners') ) : the_row();
+						?>
+								<span class="h6 opener headline-font mar0B"><?php the_sub_field('headliner'); ?></span>
+						<?php
+						    endwhile;
+						    endif;
+						?>
 						</div>
 
 						<div class="clearfix"></div>
