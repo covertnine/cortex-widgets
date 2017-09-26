@@ -33,7 +33,8 @@ class Cortex_Upcoming_Events extends WP_Widget {
 		 * Latest Posts
 		**/
 		global $post;
-		$time = current_time( 'timestamp' );
+		$cortex_date_adjustment = date('Y-m-d H:i:s');
+		$cortex_time 			= date('Y-m-d H:i:s', strtotime($cortex_date_adjustment. ' - 10 Hours' ) );
 
 		if ($cat_name == '') { // all posts
 			$cortex_upcoming_events = new WP_Query(
