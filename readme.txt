@@ -3,8 +3,8 @@ Contributors: COVERTNINE
 Donate link: https://www.covertnine.com/
 Tags: widgets
 Requires at least: 4.0
-Tested up to: 4.8.2
-Stable tag: 4.8.2
+Tested up to: 4.9
+Stable tag: 4.8.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,7 +12,7 @@ A plugin that enables you to utilize widgets for the Cortex Wordpress Theme incl
 
 == Description ==
 
-This plugin creates several widgets that are used throughout the Cortex Wordpress theme. Widgets include a simple hCard supported "get in touch" widget, about widget with an image, an instagram widget that pulls in the latest instagram photos from a specific user, a Twitter feed widget that pulls in latest tweets with proper API credentials, a MailChimp sign up wiget, a simple social "subscribe" widget with social media icons, an upcoming events widget that automatically hides events after they have passed, and a latest posts widget with featured image icon.
+This plugin creates several widgets that are used throughout the Cortex Wordpress theme. Widgets include a simple hCard supported "get in touch" widget, an instagram widget that pulls in the latest instagram photos from a specific user, a Twitter feed widget that pulls in latest tweets with proper API credentials, a MailChimp sign up widget, a simple social "subscribe" widget with social media icons, an upcoming events widget that automatically hides events after they have passed, and a latest posts widget with featured image icon.
 
 
 == Installation ==
@@ -37,6 +37,9 @@ At this time the Cortex Widgets plugin only works with the Cortex Theme
 
 
 == Changelog ==
+ 1.2 =
+ * Removed about widget as it's been replaced by WordPress' built-in text widget. Updated translation functions and file names. Tested up to 4.9
+
  1.1 =
  * Added more HTML for template changes and fixed dates to use new custom fields. Tested up to 4.8.2
 

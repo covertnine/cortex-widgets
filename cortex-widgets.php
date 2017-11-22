@@ -3,7 +3,7 @@
 Plugin Name: Cortex Widgets
 Plugin URI:  http://cortex.covertnine.com
 Description: For creating the widgets used in the Cortex Wordpress Theme.
-Version:     1.1
+Version:     1.2
 Author:      COVERT NINE
 Author URI:  http://www.covertnine.com
 Text Domain: cortex-widgets
@@ -58,7 +58,6 @@ function cortex_widget_get_template( $template ) {
     return apply_filters( 'rc_repl_template_' . $template, $file );
 }
 
-require_once( CORTEX_WIDGETS_PATH . '/widgets/widget-about.php');
 require_once( CORTEX_WIDGETS_PATH . '/widgets/widget-instagram.php');
 require_once( CORTEX_WIDGETS_PATH . '/widgets/widget-subscribe.php');
 require_once( CORTEX_WIDGETS_PATH . '/widgets/widget-mailchimp.php');
