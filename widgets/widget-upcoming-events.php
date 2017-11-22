@@ -43,7 +43,7 @@ class Cortex_Upcoming_Events extends WP_Widget {
 					'post_status'            => 'publish', // only show published events
 					'orderby'                => 'meta_value', // order by date
 					'meta_key'               => 'date_and_time', // your ACF Date & Time Picker field
-					'meta_value'             => $time, // Use the current time from above
+					'meta_value'             => $cortex_time, // Use the current time from above
 					'meta_compare'           => '>=', // Compare today's datetime with our event datetime
 					'order'                  => 'ASC', // Show earlier events first
 					'posts_per_page' 		 => $items_num,
@@ -59,7 +59,7 @@ class Cortex_Upcoming_Events extends WP_Widget {
 					'post_status'            => 'publish', // only show published events
 					'orderby'                => 'meta_value', // order by date
 					'meta_key'               => 'date_and_time', // your ACF Date & Time Picker field
-					'meta_value'             => $time, // Use the current time from above
+					'meta_value'             => $cortex_time, // Use the current time from above
 					'meta_compare'           => '>=', // Compare today's datetime with our event datetime
 					'order'                  => 'ASC', // Show earlier events first
 					'tax_query' => array(

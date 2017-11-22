@@ -38,7 +38,7 @@ if( !empty( $tweets['tweets'] ) and empty( $tweets['tweets']->errors ) ) {
 							</ul>
 							<?php
 							if (!empty($instance['show_link'])) { //check to see if they want follow link displayed
-								echo '<a class="follow-link action-link headline-color-text" href="http://twitter.com/' . $user->screen_name . '" target="_blank">';
+								echo '<a class="follow-link action-link light-color-text" href="http://twitter.com/' . $user->screen_name . '" target="_blank">';
 								_e("Follow on Twitter", "cortex");
 								echo '</a>';
 							}

@@ -37,6 +37,9 @@ At this time the Cortex Widgets plugin only works with the Cortex Theme
 
 
 == Changelog ==
+ 1.2.1 =
+ * Changed date format to match theme Tested up to 4.9
+
  1.2 =
  * Removed about widget as it's been replaced by WordPress' built-in text widget. Updated translation functions and file names. Tested up to 4.9
 
