@@ -32,7 +32,7 @@
 					<div class="col-xs-6 col-sm-12 col-md-5">
 		            	<figure class="single-article-image entry-image alignleft">
 		            		<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-		                    	<?php the_post_thumbnail('large', array('class' => 'img-responsive')); ?>
+		                    	<?php the_post_thumbnail('cortex-xlarge', array('class' => 'img-responsive')); ?>
 		                    </a>
 		    			</figure>
 					</div><!--end of col-->

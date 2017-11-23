@@ -37,8 +37,11 @@ At this time the Cortex Widgets plugin only works with the Cortex Theme
 
 
 == Changelog ==
+ 1.2.2 =
+ * Added new image size for event posters and bigger screens Tested up to 4.9
+
  1.2.1 =
- * Changed date format to match theme Tested up to 4.9
+ * Changed date format to match theme.
 
  1.2 =
  * Removed about widget as it's been replaced by WordPress' built-in text widget. Updated translation functions and file names. Tested up to 4.9
