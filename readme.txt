@@ -37,6 +37,9 @@ At this time the Cortex Widgets plugin only works with the Cortex Theme
 
 
 == Changelog ==
+ 1.2.21 =
+ * removed additional alt text from avatar image in basic template
+
  1.2.2 =
  * Added new image size for event posters and bigger screens Tested up to 4.9
 
