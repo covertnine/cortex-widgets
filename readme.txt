@@ -37,6 +37,9 @@ At this time the Cortex Widgets plugin only works with the Cortex Theme
 
 
 == Changelog ==
+ 1.2.24 = 
+ * updated function for mailchimp class to use __construct
+ 
  1.2.21 =
  * removed additional alt text from avatar image in basic template
 
