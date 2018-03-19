@@ -74,23 +74,23 @@ class Cortex_Instagram_Widget extends WP_Widget
         $size = esc_attr($instance['size']);
         $target = esc_attr($instance['target']);
         $link = esc_attr($instance['link']); ?>
-		<p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title', 'cortex-widgets'); ?>: <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" /></label></p>
-		<p><label for="<?php echo $this->get_field_id('username'); ?>"><?php _e('Username', 'cortex-widgets'); ?>: <input class="widefat" id="<?php echo $this->get_field_id('username'); ?>" name="<?php echo $this->get_field_name('username'); ?>" type="text" value="<?php echo $username; ?>" /></label></p>
-		<p><label for="<?php echo $this->get_field_id('number'); ?>"><?php _e('Number of photos: <small>(Max 12)</small>', 'cortex-widgets'); ?> <input class="widefat" id="<?php echo $this->get_field_id('number'); ?>" name="<?php echo $this->get_field_name('number'); ?>" type="text" value="<?php echo $number; ?>" /></label></p>
-		<p><label for="<?php echo $this->get_field_id('size'); ?>"><?php _e('Photo size', 'cortex-widgets'); ?>:</label>
-			<select id="<?php echo $this->get_field_id('size'); ?>" name="<?php echo $this->get_field_name('size'); ?>" class="widefat">
-				<option value="thumbnail" <?php selected('thumbnail', $size) ?>><?php _e('Thumbnail', 'cortex-widgets'); ?></option>
-				<option value="large" <?php selected('large', $size) ?>><?php _e('Large', 'cortex-widgets'); ?></option>
-			</select>
-		</p>
-		<p><label for="<?php echo $this->get_field_id('target'); ?>"><?php _e('Open links in', 'cortex-widgets'); ?>:</label>
-			<select id="<?php echo $this->get_field_id('target'); ?>" name="<?php echo $this->get_field_name('target'); ?>" class="widefat">
-				<option value="_self" <?php selected('_self', $target) ?>><?php _e('Current window (_self)', 'cortex-widgets'); ?></option>
-				<option value="_blank" <?php selected('_blank', $target) ?>><?php _e('New window (_blank)', 'cortex-widgets'); ?></option>
-			</select>
-		</p>
-		<p><label for="<?php echo $this->get_field_id('link'); ?>"><?php _e('Link text', 'cortex-widgets'); ?>: <input class="widefat" id="<?php echo $this->get_field_id('link'); ?>" name="<?php echo $this->get_field_name('link'); ?>" type="text" value="<?php echo $link; ?>" /></label></p>
-		<?php
+        <p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title', 'cortex-widgets'); ?>: <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" /></label></p>
+        <p><label for="<?php echo $this->get_field_id('username'); ?>"><?php _e('Username', 'cortex-widgets'); ?>: <input class="widefat" id="<?php echo $this->get_field_id('username'); ?>" name="<?php echo $this->get_field_name('username'); ?>" type="text" value="<?php echo $username; ?>" /></label></p>
+        <p><label for="<?php echo $this->get_field_id('number'); ?>"><?php _e('Number of photos: <small>(Max 12)</small>', 'cortex-widgets'); ?> <input class="widefat" id="<?php echo $this->get_field_id('number'); ?>" name="<?php echo $this->get_field_name('number'); ?>" type="text" value="<?php echo $number; ?>" /></label></p>
+        <p><label for="<?php echo $this->get_field_id('size'); ?>"><?php _e('Photo size', 'cortex-widgets'); ?>:</label>
+            <select id="<?php echo $this->get_field_id('size'); ?>" name="<?php echo $this->get_field_name('size'); ?>" class="widefat">
+                <option value="thumbnail" <?php selected('thumbnail', $size) ?>><?php _e('Thumbnail', 'cortex-widgets'); ?></option>
+                <option value="large" <?php selected('large', $size) ?>><?php _e('Large', 'cortex-widgets'); ?></option>
+            </select>
+        </p>
+        <p><label for="<?php echo $this->get_field_id('target'); ?>"><?php _e('Open links in', 'cortex-widgets'); ?>:</label>
+            <select id="<?php echo $this->get_field_id('target'); ?>" name="<?php echo $this->get_field_name('target'); ?>" class="widefat">
+                <option value="_self" <?php selected('_self', $target) ?>><?php _e('Current window (_self)', 'cortex-widgets'); ?></option>
+                <option value="_blank" <?php selected('_blank', $target) ?>><?php _e('New window (_blank)', 'cortex-widgets'); ?></option>
+            </select>
+        </p>
+        <p><label for="<?php echo $this->get_field_id('link'); ?>"><?php _e('Link text', 'cortex-widgets'); ?>: <input class="widefat" id="<?php echo $this->get_field_id('link'); ?>" name="<?php echo $this->get_field_name('link'); ?>" type="text" value="<?php echo $link; ?>" /></label></p>
+        <?php
     }
 
     public function update($new_instance, $old_instance)
@@ -109,7 +109,7 @@ class Cortex_Instagram_Widget extends WP_Widget
     {
         $username = strtolower($username);
         $username = str_replace('@', '', $username);
-        if ( false === ($instagram = get_transient( 'instagram-media-5-'.sanitize_title_with_dashes( $username ) ) ) ) {
+        if (false === ($instagram = get_transient('instagram-media-5-'.sanitize_title_with_dashes($username)))) {
             $remote = wp_remote_get('http://instagram.com/'.trim($username));
             if (is_wp_error($remote)) {
                 return new WP_Error('site_down', __('Unable to communicate with Instagram.', 'wp-instagram-widget'));
@@ -123,22 +123,23 @@ class Cortex_Instagram_Widget extends WP_Widget
             if (! $insta_array) {
                 return new WP_Error('bad_json', __('Instagram has returned invalid data.', 'wp-instagram-widget'));
             }
-            if (isset($insta_array['entry_data']['ProfilePage'][0]['user']['media']['nodes'])) {
-                $images = $insta_array['entry_data']['ProfilePage'][0]['user']['media']['nodes'];
+            if (isset($insta_array['entry_data']['ProfilePage'][0]['graphql']['user']['edge_owner_to_timeline_media']['edges'][0]['node']['display_url'])) {
+                $nodes = $insta_array['entry_data']['ProfilePage'][0]['graphql']['user']['edge_owner_to_timeline_media']['edges'];
             } else {
                 return new WP_Error('bad_json_2', __('Instagram has returned invalid data.', 'wp-instagram-widget'));
             }
-            if (! is_array($images)) {
+            if (! is_array($nodes)) {
                 return new WP_Error('bad_array', __('Instagram has returned invalid data.', 'wp-instagram-widget'));
             }
             $instagram = array();
-            foreach ($images as $image) {
-                $image['thumbnail'] = preg_replace( "/^https:/i", "", $image['thumbnail_resources'][0]['src']);
-                // Don't know if this is actually use anywhere - Sam
+            foreach ($nodes as $node) {
+                var_dump($node);
+                $image['thumbnail'] = preg_replace("/^https:/i", "", $node['node']['display_url']);
+                // Don't know if this is actually used anywhere - Sam
                 $image['small'] = $image['thumbnail'];
-                $image['display_src'] = preg_replace( "/^https:/i", "", $image['display_src'] );
+                $image['display_src'] = preg_replace("/^https:/i", "", $node['node']['display_url']);
                 $image['large'] = $image['display_src'];
-                if ($image['is_video'] == true) {
+                if ($node['is_video'] == true) {
                     $type = 'video';
                 } else {
                     $type = 'image';
