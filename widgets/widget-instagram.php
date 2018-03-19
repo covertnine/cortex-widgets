@@ -109,7 +109,7 @@ class Cortex_Instagram_Widget extends WP_Widget
     {
         $username = strtolower($username);
         $username = str_replace('@', '', $username);
-        if (false === ($instagram = get_transient('instagram-media-5-'.sanitize_title_with_dashes($username)))) {
+        if (true) {
             $remote = wp_remote_get('http://instagram.com/'.trim($username));
             if (is_wp_error($remote)) {
                 return new WP_Error('site_down', __('Unable to communicate with Instagram.', 'wp-instagram-widget'));
@@ -132,14 +132,16 @@ class Cortex_Instagram_Widget extends WP_Widget
                 return new WP_Error('bad_array', __('Instagram has returned invalid data.', 'wp-instagram-widget'));
             }
             $instagram = array();
+            $counter = 1;
             foreach ($nodes as $node) {
-                var_dump($node);
-                $image['thumbnail'] = preg_replace("/^https:/i", "", $node['node']['display_url']);
+                $image = $node['node'];
+
+                $image['thumbnail'] = preg_replace("/^https:/i", "", $image['thumbnail_resources']['0']['src']);
                 // Don't know if this is actually used anywhere - Sam
                 $image['small'] = $image['thumbnail'];
-                $image['display_src'] = preg_replace("/^https:/i", "", $node['node']['display_url']);
-                $image['large'] = $image['display_src'];
-                if ($node['is_video'] == true) {
+                $image['display_src'] = preg_replace("/^https:/i", "", $image['display_url']);
+                $image['large'] = $image['thumbnail_resources']['1']['src'];
+                if ($image['is_video'] == true) {
                     $type = 'video';
                 } else {
                     $type = 'image';
@@ -150,15 +152,15 @@ class Cortex_Instagram_Widget extends WP_Widget
                 }
                 $instagram[] = array(
                     'description'   => $caption,
-                    'link'            => '//instagram.com/p/' . $image['code'],
-                    'time'            => $image['date'],
-                    'comments'        => $image['comments']['count'],
-                    'likes'            => $image['likes']['count'],
-                    'thumbnail'        => $image['thumbnail'],
-                    'small'            => $image['small'],
-                    'large'            => $image['large'],
-                    'original'        => $image['display_src'],
-                    'type'            => $type
+                    'link'          => '//instagram.com/p/' . $image['shortcode'],
+                    'time'          => $image['taken_at_timestamp'],
+                    'comments'      => $image['edge_media_to_comment']['count'],
+                    'likes'         => $image['edge_liked_by']['count'],
+                    'thumbnail'     => $image['thumbnail'],
+                    'small'         => $image['small'],
+                    'large'         => $image['large'],
+                    'original'      => $image['display_src'],
+                    'type'          => $type
                 );
             }
             // do not set an empty transient - should help catch private or empty accounts
