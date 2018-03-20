@@ -37,6 +37,9 @@ At this time the Cortex Widgets plugin only works with the Cortex Theme
 
 
 == Changelog ==
+1.2.3 = 
+* updated Instagram widget to work with new object
+
  1.2.24 = 
  * updated function for mailchimp class to use __construct
  
