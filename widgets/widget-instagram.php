@@ -109,7 +109,7 @@ class Cortex_Instagram_Widget extends WP_Widget
     {
         $username = strtolower($username);
         $username = str_replace('@', '', $username);
-        if (true) {
+        if (false === ($instagram = get_transient('instagram-media-5-'.sanitize_title_with_dashes($username)))) {
             $remote = wp_remote_get('http://instagram.com/'.trim($username));
             if (is_wp_error($remote)) {
                 return new WP_Error('site_down', __('Unable to communicate with Instagram.', 'wp-instagram-widget'));
