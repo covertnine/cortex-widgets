@@ -31,8 +31,7 @@ class NS_MC_Plugin {
 		}
 
 		 // Add our widget when widgets get intialized.
-		add_action('widgets_init', create_function('', 'return register_widget("NS_Widget_MailChimp");'));
-
+		add_action('widgets_init', function() { return register_widget("NS_Widget_MailChimp"); });
 	}
 
 	public static function get_instance () {

@@ -534,7 +534,7 @@ class MCAPI {
             array type_opts the type-specific options for the campaign - can be passed to campaignCreate()
      */
     function campaigns($filters=array (
-), $start=0, $limit=25, $sort_field='create_time', $sort_dir='DESC') {
+), $start=0, $limit=50, $sort_field='create_time', $sort_dir='DESC') {
         $params = array();
         $params["filters"] = $filters;
         $params["start"] = $start;

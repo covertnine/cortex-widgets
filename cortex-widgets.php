@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: Cortex Widgets
-Plugin URI:  http://cortex.covertnine.com
+Plugin URI:  https://cortex.covertnine.com
 Description: For creating the widgets used in the Cortex Wordpress Theme.
-Version:     1.2.4
+Version:     1.2.5
 Author:      COVERT NINE
-Author URI:  http://www.covertnine.com
+Author URI:  https://www.covertnine.com
 Text Domain: cortex-widgets
 GitHub Plugin URI: https://github.com/covertnine/cortex-widgets
 GitHub Branch: master
