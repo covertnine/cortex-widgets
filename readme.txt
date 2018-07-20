@@ -37,12 +37,15 @@ At this time the Cortex Widgets plugin only works with the Cortex Theme
 
 
 == Changelog ==
-1.2.3 = 
+1.2.5 =
+* updated bugs related to PHP 7.2 and limit of mailchimp lists to 25 items
+
+1.2.3 =
 * updated Instagram widget to work with new object
 
- 1.2.24 = 
+ 1.2.24 =
  * updated function for mailchimp class to use __construct
- 
+
  1.2.21 =
  * removed additional alt text from avatar image in basic template
 
