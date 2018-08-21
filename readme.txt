@@ -37,6 +37,9 @@ At this time the Cortex Widgets plugin only works with the Cortex Theme
 
 
 == Changelog ==
+1.2.6 =
+* added support for Mailchimp API version 3.0
+
 1.2.5 =
 * updated bugs related to PHP 7.2 and limit of mailchimp lists to 25 items
 
