@@ -55,7 +55,7 @@ class NS_Widget_MailChimp extends WP_Widget
         if (false == $mcapi) {
             echo $this->ns_mc_plugin->get_admin_notices();
         } else {
-            $this->lists = $mcapi_three->get('lists', ['count' => 50]);
+            $this->lists = $mcapi_three->get('lists', ['count' => 100]);
             $defaults = array(
                 'failure_message' => $this->default_failure_message,
                 'title' => $this->default_title,
