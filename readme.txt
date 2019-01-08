@@ -3,8 +3,8 @@ Contributors: COVERTNINE
 Donate link: https://www.covertnine.com/
 Tags: widgets
 Requires at least: 4.0
-Tested up to: 4.9
-Stable tag: 4.8.3
+Tested up to: 5.0.2
+Stable tag: 5.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -37,6 +37,9 @@ At this time the Cortex Widgets plugin only works with the Cortex Theme
 
 
 == Changelog ==
+1.2.7 =
+* updated query for events widget
+
 1.2.6 =
 * added support for Mailchimp API version 3.0
 
