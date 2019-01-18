@@ -51,10 +51,10 @@ class NS_Widget_MailChimp extends WP_Widget
     public function form($instance)
     {
         $mcapi = $this->ns_mc_plugin->get_mcapi();
-        $mcapi_three = new MailChimp($mcapi->api_key);
-        if (false == $mcapi) {
+        if ((false == $mcapi) || ($mcapi == '')) {
             echo $this->ns_mc_plugin->get_admin_notices();
         } else {
+	        $mcapi_three = new MailChimp($mcapi->api_key);
             $this->lists = $mcapi_three->get('lists', ['count' => 100]);
             $defaults = array(
                 'failure_message' => $this->default_failure_message,
@@ -154,7 +154,7 @@ class NS_Widget_MailChimp extends WP_Widget
                       'status' => 'subscribed',
                       'merge_fields' => $merge_vars,
                     ]
-   
+
                     );
 
                     if ($subscribed === false) {

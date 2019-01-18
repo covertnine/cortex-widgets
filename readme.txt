@@ -38,7 +38,7 @@ At this time the Cortex Widgets plugin only works with the Cortex Theme
 
 == Changelog ==
 1.2.7 =
-* updated query for events widget
+* updated query for events widget. Adjusted logic for error checking in API calls on widgets page
 
 1.2.6 =
 * added support for Mailchimp API version 3.0
