@@ -70,7 +70,7 @@ class Cortex_Latest_Category_Posts extends WP_Widget {
             if ( $title ) echo $before_title . $title . $after_title;
 
 	 		// check for template in active theme
-			$template = cortex_widget_get_template('widget-latest-category-template.php');
+			$template = cortextoo_widget_get_template('widget-latest-category-template.php');
 
 			// if none found use the default template
 			if ( $template == '' ) $template = 'widget-latest-category-template.php';

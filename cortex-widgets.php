@@ -17,8 +17,6 @@ defined( 'ABSPATH' ) or die( 'Restricted' );
 define('CORTEX_WIDGETS_JS_URL', plugin_dir_url(__FILE__) . 'widgets/js');
 define('CORTEX_WIDGETS_CSS_URL', plugin_dir_url(__FILE__) . 'widgets/css');
 define('CORTEX_WIDGETS_IMAGES_URL', plugin_dir_url(__FILE__) . 'widgets/img');
-define('CORTEX_WIDGETS_INSTAGRAM_WIDGET_BASE', 'widgets/widget-instagram.php');
-define('CORTEX_WIDGETS_INSTAGRAM_WIDGET_FILE', 'widget-instagram.php');
 define("CORTEX_WIDGETS_PATH", plugin_dir_path(__FILE__));
 define('CORTEX_WIDGETS_INCLUDES_PATH', plugin_dir_path(__FILE__) . '/includes');
 define('CORTEX_TEXTDOMAIN', 'cortex-widgets');
@@ -41,7 +39,7 @@ class CortexWidgets{
  * @since 1.0
  */
 
-function cortex_widget_get_template( $template ) {
+function cortextoo_widget_get_template( $template ) {
 
     // Get the template slug
     $template_slug = rtrim( $template, '.php' );
@@ -58,10 +56,30 @@ function cortex_widget_get_template( $template ) {
     return apply_filters( 'rc_repl_template_' . $template, $file );
 }
 
+function cortextoo_widgets_posted_on() {
+	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
+	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
+		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s"> (%4$s) </time>';
+	}
+	$time_string = sprintf( $time_string,
+		esc_attr( get_the_date( 'c' ) ),
+		esc_html( get_the_date() ),
+		esc_attr( get_the_modified_date( 'c' ) ),
+		esc_html( get_the_modified_date() )
+	);
+	$posted_on = sprintf(
+		esc_html_x( 'Posted on %s', 'post date', 'cortextoo' ),
+		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+	);
+	$byline = sprintf(
+		esc_html_x( 'by %s', 'post author', 'cortextoo' ),
+		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+	);
+	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
+}
+
+
 require_once( CORTEX_WIDGETS_PATH . '/widgets/widget-instagram.php');
 require_once( CORTEX_WIDGETS_PATH . '/widgets/widget-subscribe.php');
-require_once( CORTEX_WIDGETS_PATH . '/widgets/widget-mailchimp.php');
-require_once( CORTEX_WIDGETS_PATH . '/widgets/widget-twitter.php');
 require_once( CORTEX_WIDGETS_PATH . '/widgets/widget-contact.php');
 require_once( CORTEX_WIDGETS_PATH . '/widgets/widget-latest-category.php');
-require_once( CORTEX_WIDGETS_PATH . '/widgets/widget-upcoming-events.php');
