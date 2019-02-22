@@ -48,7 +48,7 @@ class Cortex_Contact_Widget extends WP_Widget {
 		// use a template for the output so that it can easily be overridden by theme
 
 		// check for template in active theme
-		$template = cortex_widget_get_template('widget-contact-template.php');
+		$template = cortextoo_widget_get_template('widget-contact-template.php');
 
 		// if none found use the default template
 		if ( $template == '' ) $template = 'widget-contact-template.php';

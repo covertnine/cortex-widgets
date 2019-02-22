@@ -49,7 +49,7 @@ class Cortex_Instagram_Widget extends WP_Widget
                 }
 
                 // check for template in active theme
-                $template = cortex_widget_get_template('widget-instagram-template.php');
+                $template = cortextoo_widget_get_template('widget-instagram-template.php');
 
                 // if none found use the default template
                 if ($template == '') {
